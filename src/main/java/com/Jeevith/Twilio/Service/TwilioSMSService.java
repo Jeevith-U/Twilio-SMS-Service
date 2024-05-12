@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.Jeevith.Twilio.Configuration.TwilioConfig;
@@ -20,6 +21,7 @@ public class TwilioSMSService {
 	
 	private String defaultMessage = "Hello, this message is sent from Doctor Varsha. I hope you remember your appointment today." ;
 	
+	@Scheduled(cron = " 0 0 * * * * ")
 	public ResponseEntity<TwilioDao> sendSMSForPaticent(){
 		
 		Message msg = Message.creator(

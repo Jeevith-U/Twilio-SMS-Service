@@ -3,6 +3,7 @@ package com.Jeevith.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.Jeevith.Twilio.Configuration.TwilioConfig;
 import com.twilio.Twilio;
@@ -10,6 +11,7 @@ import com.twilio.Twilio;
 import jakarta.annotation.PostConstruct;
 
 @SpringBootApplication
+@EnableScheduling
 public class Twilio1Application {
 	
 	@Autowired
